@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
+/* Tokens Tailwind v4 */
+@theme {
+  --color-brand-teal: #19d3c5;
+  --color-brand-blue: #2f6bff;
+  --color-brand-ink: #0a0f1a;
+  --color-brand-paper: #0f172a;
+
+  --radius-xl: 14px;
+  --radius-2xl: 18px;
+  --radius-3xl: 24px;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-brand-ink);
+  color: white;
+  font-family: var(--font-space-grotesk), "Inter", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Offset de âncoras (navbar sticky) */
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+/* Tipografia base */
+@layer base {
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Utilities premium (sem @apply de classe custom dentro de outra) */
+@layer utilities {
+  .card-premium {
+    @apply rounded-2xl border border-white/10 bg-white/5 transition;
+  }
+
+  .card-premium:hover {
+    @apply border-white/20 bg-white/10;
+  }
+
+  .card-premium-pressable {
+    @apply rounded-2xl border border-white/10 bg-white/5 transition hover:border-white/20 hover:bg-white/10 hover:-translate-y-[1px] active:translate-y-0;
+  }
+}
+
+/* Espaço extra no mobile por causa do CTA fixo */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 72px;
+  }
 }
