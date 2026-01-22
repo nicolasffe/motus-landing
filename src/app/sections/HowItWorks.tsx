@@ -11,14 +11,14 @@ function Step({
   desc: string;
 }) {
   return (
-    <div className="relative rounded-2xl border border-white/10 bg-white/5 p-6">
+    <div className="card-premium p-6 backdrop-blur-md">
       <div className="flex items-start gap-4">
-        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black/30 text-sm font-semibold text-white">
+        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-brand-teal/35 via-white/10 to-black/60 text-sm font-bold text-white shadow-lg shadow-black/30 ring-1 ring-white/10">
           {index}
         </div>
         <div>
           <div className="text-base font-semibold text-white">{title}</div>
-          <p className="mt-2 text-sm text-white/70">{desc}</p>
+          <p className="mt-2 text-sm text-white/75">{desc}</p>
         </div>
       </div>
 

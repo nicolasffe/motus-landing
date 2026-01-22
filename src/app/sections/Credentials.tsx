@@ -18,9 +18,9 @@ function Card({
   desc: string;
 }) {
   return (
-    <div className="card-premium p-6">
+    <div className="card-premium p-6 backdrop-blur-md">
       <div className="text-base font-semibold text-white">{title}</div>
-      <p className="mt-2 text-sm text-white/70">{desc}</p>
+      <p className="mt-2 text-sm text-white/75">{desc}</p>
     </div>
   );
 }
@@ -61,7 +61,7 @@ export function Credentials() {
         </div>
 
         {/* “Para quem é” */}
-        <div className="mt-10 rounded-3xl border border-white/10 bg-black/20 p-8">
+        <div className="card-premium mt-10 p-8 backdrop-blur-md">
           <div className="text-sm font-semibold text-white">Para quem é</div>
 
           <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -73,7 +73,7 @@ export function Credentials() {
             ].map((role) => (
               <div
                 key={role}
-                className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+                className="card-premium px-4 py-3 backdrop-blur-md"
               >
                 <div className="text-sm font-semibold text-white">{role}</div>
               </div>

@@ -29,12 +29,16 @@ export function Problem() {
           ].map((item) => (
             <div
               key={item.title}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6"
+              className="card-premium p-6 backdrop-blur-md"
             >
-              <div className="text-base font-semibold text-white">
+              <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/70">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-teal" />
+                Contexto
+              </div>
+              <div className="mt-2 text-base font-semibold text-white">
                 {item.title}
               </div>
-              <p className="mt-2 text-sm text-white/70">{item.desc}</p>
+              <p className="mt-2 text-sm text-white/75">{item.desc}</p>
             </div>
           ))}
         </div>

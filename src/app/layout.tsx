@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Manrope, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const displayFont = Plus_Jakarta_Sans({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+});
+
+const bodyFont = Manrope({
+  variable: "--font-body",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -26,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${spaceGrotesk.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${displayFont.variable} ${bodyFont.variable} ${geistMono.variable} antialiased`}>
         <div className="relative min-h-screen">
           {/* FUNDO GLOBAL LIMPO (SEM QUADRICULADO) */}
           <div className="pointer-events-none fixed inset-0 -z-10">

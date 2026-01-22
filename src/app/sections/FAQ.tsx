@@ -39,13 +39,13 @@ function Item({
   onToggle: () => void;
 }) {
   return (
-    <div className="card-premium">
+    <div className="card-premium backdrop-blur-md">
       <button
         onClick={onToggle}
         className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
       >
         <div className="text-sm font-semibold text-white">{q}</div>
-        <div className="flex h-8 w-8 flex-none items-center justify-center rounded-xl border border-white/10 bg-black/20 text-white/70">
+        <div className="flex h-9 w-9 flex-none items-center justify-center rounded-xl bg-gradient-to-br from-brand-teal/30 via-white/10 to-black/60 text-white shadow-lg shadow-black/30 ring-1 ring-white/10">
           {open ? "–" : "+"}
         </div>
       </button>

@@ -60,7 +60,6 @@ export function Contact() {
 
   return (
     <section id="contato" className="relative overflow-hidden py-20">
-
       <SectionHeaderDark
         eyebrow="Contato"
         title="Fale com o time MOTUS"
@@ -70,7 +69,7 @@ export function Contact() {
 
       <Container>
         <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_420px] lg:items-start">
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
+          <div className="card-premium p-8 backdrop-blur-md">
             <div className="text-sm font-semibold text-white">O que você recebe na demo</div>
 
             <ul className="mt-4 space-y-3 text-sm text-white/70">
@@ -87,9 +86,9 @@ export function Contact() {
             </ul>
           </div>
 
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div className="card-premium p-6 backdrop-blur-md">
             {status === "sent" ? (
-              <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
+              <div className="card-premium p-6 backdrop-blur-md">
                 <div className="text-sm font-semibold text-white">
                   Solicitação enviada (modo teste)
                 </div>

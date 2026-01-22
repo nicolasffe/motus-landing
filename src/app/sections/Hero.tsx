@@ -23,12 +23,15 @@ export function Hero() {
 
       <Container>
         <div className="relative min-h-screen max-w-6xl flex flex-col gap-8 pt-20 pb-10 lg:pt-24">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em] text-white/80">
-            <span className="h-2 w-2 rounded-full bg-brand-teal" />
-            <span>{site.hero.badge}</span>
+          <div className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/60">
+            <span className="h-px w-10 bg-gradient-to-r from-transparent via-white/40 to-white/80" />
+            <span className="rounded-md bg-white/8 px-3 py-1 shadow-inner shadow-black/20">
+              {site.hero.badge}
+            </span>
+            <span className="h-px w-10 bg-gradient-to-r from-white/80 via-white/40 to-transparent" />
           </div>
 
-          <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-white drop-shadow-[0_12px_30px_rgba(0,0,0,0.45)] sm:text-5xl">
+          <h1 className="max-w-3xl text-balance text-5xl font-extrabold leading-tight tracking-tight bg-gradient-to-r from-white via-white to-brand-teal/80 bg-clip-text text-transparent drop-shadow-[0_14px_38px_rgba(0,0,0,0.5)] sm:text-6xl">
             {site.hero.headline}
           </h1>
 
@@ -51,9 +54,12 @@ export function Hero() {
               { k: "IA preditiva", v: "Alertas antes do treino" },
               { k: "Disponibilidade", v: "Elenco acima de 90%" },
             ].map((item) => (
-              <div key={item.k} className="card-premium border-white/15 bg-white/5 px-4 py-3">
-                <div className="text-xs text-white/60">{item.k}</div>
-                <div className="mt-1 text-sm font-semibold text-white">{item.v}</div>
+              <div key={item.k} className="card-premium px-4 py-3 backdrop-blur-md">
+                <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-white/70">
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand-teal" />
+                  {item.k}
+                </div>
+                <div className="mt-2 text-sm font-semibold text-white">{item.v}</div>
               </div>
             ))}
           </div>

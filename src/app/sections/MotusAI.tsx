@@ -5,9 +5,12 @@ import { Button } from "@/components/ui/Button";
 
 function SignalCard({ title, desc }: { title: string; desc: string }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-      <div className="text-sm font-semibold text-white">{title}</div>
-      <p className="mt-2 text-sm text-white/70">{desc}</p>
+    <div className="card-premium p-6 backdrop-blur-md">
+      <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/70">
+        <span className="h-1.5 w-1.5 rounded-full bg-brand-teal" />
+        {title}
+      </div>
+      <p className="mt-3 text-sm text-white/75">{desc}</p>
     </div>
   );
 }
@@ -53,7 +56,7 @@ export function MotusAI() {
               </Button>
             </div>
 
-            <div className="mt-6 rounded-2xl border border-white/10 bg-black/25 p-5">
+            <div className="card-premium mt-6 p-5 backdrop-blur-md">
               <div className="text-sm font-semibold text-white">Exemplo de alerta</div>
               <p className="mt-2 text-sm text-white/70">
                 Atleta 07 • Sobrecarga alta detectada (volume/intensidade ↑ em 3 sessões).
@@ -64,17 +67,21 @@ export function MotusAI() {
                   { k: "Monitorar", v: "Sono + prontidão pré-treino" },
                   { k: "Próximo passo", v: "Reavaliar em 48h" },
                 ].map((item) => (
-                  <div key={item.k} className="rounded-xl border border-white/10 bg-white/5 px-3 py-2">
+                  <div key={item.k} className="card-premium px-3 py-2 backdrop-blur-md">
                     <div className="text-[11px] uppercase tracking-[0.08em] text-white/60">{item.k}</div>
                     <div className="text-sm font-semibold text-white">{item.v}</div>
                   </div>
                 ))}
               </div>
+              <div className="mt-4 flex flex-wrap gap-2 text-xs text-white/65">
+                <span className="rounded-full bg-white/5 px-3 py-1">Sugestão automática de ação</span>
+                <span className="rounded-full bg-white/5 px-3 py-1">Compartilhar com staff</span>
+              </div>
             </div>
           </div>
 
           <div className="relative">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="card-premium p-6 backdrop-blur-md">
               <div className="flex items-center justify-between">
                 <div className="text-sm font-semibold text-white">Alertas da IA</div>
                 <div className="flex items-center gap-2">
@@ -83,7 +90,7 @@ export function MotusAI() {
                 </div>
               </div>
 
-              <div className="mt-6 rounded-xl border border-white/10 bg-black/20 p-4">
+              <div className="card-premium mt-6 p-4 backdrop-blur-md">
                 <div className="text-xs text-white/60">Alertas recentes</div>
 
                 <div className="mt-3 grid gap-3">
@@ -94,7 +101,7 @@ export function MotusAI() {
                   ].map((row) => (
                     <div
                       key={row.k}
-                      className="flex items-center justify-between rounded-lg border border-white/10 bg-white/5 px-3 py-2"
+                      className="card-premium flex items-center justify-between px-3 py-2 backdrop-blur-md"
                     >
                       <div>
                         <div className="text-sm text-white">{row.k}</div>

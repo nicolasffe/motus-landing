@@ -19,11 +19,14 @@ export function PlatformIntro() {
       <Container>
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div className="space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-white/70">
-              <span className="h-2 w-2 rounded-full bg-brand-teal" />
-              Plataforma
+            <div className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/60">
+              <span className="h-px w-10 bg-gradient-to-r from-transparent via-white/40 to-white/80" />
+              <span className="rounded-md bg-white/8 px-3 py-1 shadow-inner shadow-black/20">
+                Plataforma
+              </span>
+              <span className="h-px w-10 bg-gradient-to-r from-white/80 via-white/40 to-transparent" />
             </div>
-            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-balance text-4xl font-extrabold leading-tight tracking-tight bg-gradient-to-r from-white via-white to-brand-teal/80 bg-clip-text text-transparent drop-shadow-[0_12px_30px_rgba(0,0,0,0.4)] sm:text-5xl">
               Uma plataforma única para decidir rápido
             </h2>
             <p className="text-base text-white/75 sm:text-lg">
@@ -31,9 +34,12 @@ export function PlatformIntro() {
             </p>
             <div className="grid gap-3 sm:grid-cols-2">
               {bullets.map((item) => (
-                <div key={item.title} className="card-premium border-white/10 bg-white/5 px-4 py-3">
-                  <div className="text-xs text-white/60">{item.title}</div>
-                  <div className="mt-1 text-sm font-semibold text-white">{item.desc}</div>
+                <div key={item.title} className="card-premium px-4 py-4 backdrop-blur-md">
+                  <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/70">
+                    <span className="h-1.5 w-1.5 rounded-full bg-brand-teal" />
+                    {item.title}
+                  </div>
+                  <div className="mt-2 text-sm font-semibold text-white">{item.desc}</div>
                 </div>
               ))}
             </div>
@@ -48,7 +54,7 @@ export function PlatformIntro() {
           </div>
 
           <div className="space-y-4">
-            <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-black/30 p-6 shadow-xl shadow-black/20">
+            <div className="card-premium p-6 backdrop-blur-md">
               <div className="flex items-center justify-between">
                 <div>
                   <div className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
@@ -62,7 +68,7 @@ export function PlatformIntro() {
               </div>
 
               <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
+                <div className="card-premium p-4 backdrop-blur-md">
                   <div className="text-[11px] uppercase tracking-[0.1em] text-white/50">
                     Carga
                   </div>
@@ -73,7 +79,7 @@ export function PlatformIntro() {
                   <div className="text-sm font-semibold text-white">Estável</div>
                 </div>
 
-                <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
+                <div className="card-premium p-4 backdrop-blur-md">
                   <div className="text-[11px] uppercase tracking-[0.1em] text-white/50">
                     Alertas
                   </div>
@@ -93,7 +99,7 @@ export function PlatformIntro() {
                   </div>
                 </div>
 
-                <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
+                <div className="card-premium p-4 backdrop-blur-md">
                   <div className="text-[11px] uppercase tracking-[0.1em] text-white/50">
                     Retorno
                   </div>
@@ -115,7 +121,7 @@ export function PlatformIntro() {
               </div>
             </div>
 
-            <div className="rounded-3xl border border-white/10 bg-black/25 p-6">
+            <div className="card-premium p-6 backdrop-blur-md">
               <div className="text-sm font-semibold text-white">Como ajuda o time</div>
               <ul className="mt-4 space-y-3 text-sm text-white/75">
                 {impacts.map((item) => (
@@ -125,18 +131,18 @@ export function PlatformIntro() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5">
+              <div className="card-premium mt-6 p-5 backdrop-blur-md">
                 <div className="text-xs text-white/60">Ritual sugerido</div>
                 <div className="mt-2 grid gap-2 text-sm text-white/75">
-                  <div className="flex justify-between rounded-xl bg-black/30 px-3 py-2">
+                  <div className="flex justify-between rounded-xl bg-white/5 px-3 py-2">
                     <span>Pré-treino</span>
                     <span className="text-white/60">Alertas + prontidão</span>
                   </div>
-                  <div className="flex justify-between rounded-xl bg-black/30 px-3 py-2">
+                  <div className="flex justify-between rounded-xl bg-white/5 px-3 py-2">
                     <span>Pós-treino</span>
                     <span className="text-white/60">Resposta ao esforço</span>
                   </div>
-                  <div className="flex justify-between rounded-xl bg-black/30 px-3 py-2">
+                  <div className="flex justify-between rounded-xl bg-white/5 px-3 py-2">
                     <span>Planejamento</span>
                     <span className="text-white/60">Microciclo seguinte</span>
                   </div>

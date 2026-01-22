@@ -46,14 +46,17 @@ export function PlatformDeepDive() {
       <Container>
         <div className="mt-12 grid gap-4 lg:grid-cols-3">
           {layers.map((layer) => (
-            <div key={layer.title} className="card-premium border-white/15 bg-white/5 p-6">
-              <div className="text-sm font-semibold text-white">{layer.title}</div>
-              <p className="mt-2 text-sm text-white/70">{layer.desc}</p>
+            <div key={layer.title} className="card-premium p-6 backdrop-blur-md">
+              <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/70">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-teal" />
+                {layer.title}
+              </div>
+              <p className="mt-3 text-sm text-white/75">{layer.desc}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-black/30 p-6 shadow-xl shadow-black/20">
+        <div className="card-premium mt-10 p-6 backdrop-blur-md">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
@@ -67,7 +70,7 @@ export function PlatformDeepDive() {
           </div>
 
           <div className="mt-4 grid gap-4 md:grid-cols-[1.1fr_0.9fr]">
-            <div className="rounded-2xl border border-white/10 bg-black/30 p-5">
+            <div className="card-premium p-5 backdrop-blur-md">
               <div className="flex items-center justify-between text-xs text-white/60">
                 <span>Microciclo • Semana 22</span>
                 <span className="rounded-full bg-white/10 px-2 py-1 text-[11px] text-white">Live</span>
@@ -78,7 +81,7 @@ export function PlatformDeepDive() {
                   { label: "Risco alto", value: "2 atletas" },
                   { label: "Retorno", value: "1 em revisão" },
                 ].map((item) => (
-                  <div key={item.label} className="rounded-xl border border-white/10 bg-white/5 px-3 py-2">
+                  <div key={item.label} className="card-premium px-3 py-2 backdrop-blur-md">
                     <div className="text-[11px] uppercase tracking-[0.1em] text-white/50">
                       {item.label}
                     </div>
@@ -91,7 +94,7 @@ export function PlatformDeepDive() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-black/40 p-5">
+            <div className="card-premium p-5 backdrop-blur-md">
               <div className="text-sm font-semibold text-white">Roteiro rápido</div>
               <p className="mt-2 text-xs text-white/60">
                 Use a mesma leitura em reunião, treino e gestão.
@@ -116,9 +119,12 @@ export function PlatformDeepDive() {
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {modules.map((module) => (
-            <div key={module.title} className="rounded-2xl border border-white/10 bg-black/25 p-5">
-              <div className="text-sm font-semibold text-white">{module.title}</div>
-              <ul className="mt-3 space-y-2 text-sm text-white/70">
+            <div key={module.title} className="card-premium p-5 backdrop-blur-md">
+              <div className="flex items-center justify-between">
+                <div className="text-sm font-semibold text-white">{module.title}</div>
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-teal" />
+              </div>
+              <ul className="mt-3 space-y-2 text-sm text-white/75">
                 {module.points.map((p) => (
                   <li key={p} className="flex gap-2">
                     <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-teal" />
@@ -130,7 +136,7 @@ export function PlatformDeepDive() {
           ))}
         </div>
 
-        <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6">
+        <div className="card-premium mt-10 p-6 backdrop-blur-md">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
               <div className="text-sm font-semibold text-white">Ritual recomendado</div>
@@ -143,16 +149,13 @@ export function PlatformDeepDive() {
 
           <div className="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-4">
             {rituals.map((r) => (
-              <div
-                key={r.label}
-                className="rounded-2xl border border-white/10 bg-black/25 px-4 py-3 transition hover:border-white/20 hover:bg-white/10"
-              >
+              <div key={r.label} className="card-premium px-4 py-3 backdrop-blur-md">
                 <div className="flex items-center justify-between text-xs text-white/60">
                   <span>{r.label}</span>
                   <span className="h-2 w-2 rounded-full bg-brand-teal" />
                 </div>
                 <div className="mt-2 text-sm font-semibold text-white">{r.title}</div>
-                <p className="text-xs text-white/60">{r.desc}</p>
+                <p className="text-xs text-white/65">{r.desc}</p>
               </div>
             ))}
           </div>

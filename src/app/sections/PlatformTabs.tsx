@@ -70,7 +70,7 @@ export function PlatformTabs() {
 
       <Container>
         <div className="mt-12 grid gap-8 lg:grid-cols-[420px_1fr] lg:items-start">
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+          <div className="card-premium p-4 backdrop-blur-md">
             <div className="grid grid-cols-2 gap-2">
               {tabs.map((t) => {
                 const isActive = t.key === active;

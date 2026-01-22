@@ -12,16 +12,14 @@ function Block({
   desc: string;
 }) {
   return (
-    <div className="card-premium relative overflow-hidden p-6">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/5 via-white/0 to-brand-teal/10" />
-
-      <div className="relative flex flex-col gap-3">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-white/60">
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-teal" />
+    <div className="card-premium p-6 backdrop-blur-md">
+      <div className="flex flex-col gap-3">
+        <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/70">
+          <span className="h-1 w-6 rounded-full bg-brand-teal/60" />
           {label}
         </div>
         <div className="text-base font-semibold text-white">{title}</div>
-        <p className="text-sm leading-relaxed text-white/70">{desc}</p>
+        <p className="text-sm leading-relaxed text-white/75">{desc}</p>
       </div>
     </div>
   );
@@ -57,9 +55,9 @@ export function MiniCase() {
         </div>
 
         <div className="mt-10 grid gap-4 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
-          <div className="rounded-3xl border border-white/10 bg-black/25 p-8">
+          <div className="card-premium p-8 backdrop-blur-md">
             <div className="text-sm font-semibold text-white">O que muda na prática</div>
-            <ul className="mt-4 space-y-3 text-sm text-white/70">
+            <ul className="mt-4 space-y-3 text-sm text-white/75">
               {[
                 "Indicadores padronizados, sem ruído.",
                 "Histórico do atleta sempre visível.",
@@ -73,7 +71,7 @@ export function MiniCase() {
             </ul>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+          <div className="card-premium p-8 backdrop-blur-md">
             <div className="text-sm font-semibold text-white">
               Quer ver com os dados do seu clube?
             </div>
