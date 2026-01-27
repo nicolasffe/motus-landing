@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden hero-section">
       {/* Background mais conectado ao produto */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 hero-bg">
         <Image
           src="https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&w=1800&q=80"
           alt="Atletas de futebol em campo"

@@ -16,6 +16,10 @@
   color-scheme: dark;
 }
 
+[data-theme="light"] {
+  color-scheme: light;
+}
+
 html,
 body {
   height: 100%;
@@ -41,6 +45,7 @@ section[id] {
     font-family: var(--font-display), var(--font-body), system-ui, -apple-system,
       BlinkMacSystemFont, "Segoe UI", sans-serif;
     letter-spacing: -0.02em;
+    text-shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
   }
 }
 
@@ -74,6 +79,81 @@ section[id] {
   .card-premium-pressable {
     @apply rounded-2xl border border-white/10 bg-white/5 transition hover:border-white/20 hover:bg-white/10 hover:-translate-y-[1px] active:translate-y-0;
   }
+
+  .logo-dark {
+    display: inline-block;
+  }
+  .logo-light {
+    display: none;
+  }
+}
+
+/* Tema claro */
+[data-theme="light"] body {
+  background: #f5f7fb;
+  color: #0b1220;
+}
+
+[data-theme="light"] .card-premium {
+  @apply border-black/5 ring-1 ring-black/5 shadow-lg shadow-black/10;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(244, 247, 252, 0.96));
+}
+
+[data-theme="light"] .card-premium::before {
+  background: radial-gradient(circle at 20% 20%, rgba(25, 211, 197, 0.08), transparent 32%),
+    radial-gradient(circle at 80% 0%, rgba(0, 0, 0, 0.06), transparent 36%);
+}
+
+[data-theme="light"] .card-premium *,
+[data-theme="light"] .card-premium a {
+  color: #0b1220 !important;
+}
+
+[data-theme="light"] [class*="text-white"] {
+  color: #0b1220 !important;
+}
+
+[data-theme="light"] [class*="text-white/"] {
+  color: #1f2937 !important;
+}
+
+[data-theme="light"] [class*="bg-black"] {
+  background-color: #ffffff !important;
+}
+
+[data-theme="light"] [class*="bg-white/5"],
+[data-theme="light"] [class*="bg-white/10"] {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+[data-theme="light"] [class*="border-white"] {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="light"] .card-premium:hover {
+  @apply border-black/10 bg-white;
+}
+
+[data-theme="light"] .logo-dark {
+  display: none !important;
+}
+
+[data-theme="light"] .logo-light {
+  display: inline-block !important;
+}
+
+[data-theme="light"] .hero-section .hero-bg img {
+  filter: brightness(0.9) saturate(1.05);
+}
+
+[data-theme="light"] .hero-section .hero-bg > div:nth-child(2) {
+  /* overlay principal */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.15));
+}
+
+[data-theme="light"] .hero-section .hero-bg > div:nth-child(3),
+[data-theme="light"] .hero-section .hero-bg > div:nth-child(4) {
+  display: none;
 }
 
 /* Espaço extra no mobile por causa do CTA fixo */

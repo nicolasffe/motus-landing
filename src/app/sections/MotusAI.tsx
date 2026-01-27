@@ -117,7 +117,14 @@ export function MotusAI() {
                   alt="MOTUS IA"
                   width={260}
                   height={96}
-                  className="h-18 w-auto opacity-95 drop-shadow-[0_16px_42px_rgba(25,211,197,0.4)]"
+                  className="logo-dark h-18 w-auto opacity-95 drop-shadow-[0_16px_42px_rgba(25,211,197,0.4)]"
+                />
+                <Image
+                  src="/brand/motus-ia-color.png"
+                  alt="MOTUS IA"
+                  width={260}
+                  height={96}
+                  className="logo-light hidden h-18 w-auto opacity-95 drop-shadow-[0_16px_42px_rgba(25,211,197,0.25)]"
                 />
               </div>
             </div>
