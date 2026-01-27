@@ -6,8 +6,8 @@ export function Solution() {
     <section id="solucao" className="relative py-20">
       <SectionHeaderDark
         eyebrow="A solução MOTUS"
-        title="Tudo o que importa em uma leitura simples"
-        subtitle="Dados do clube centralizados com alertas que o staff usa no mesmo dia."
+        title="Dados claros, decisões mais seguras"
+        subtitle="Informação do elenco em um só lugar para orientar treino, recuperação e gestão."
         align="left"
       />
 
@@ -16,28 +16,23 @@ export function Solution() {
           {[
             {
               title: "Centralização imediata",
-              desc: "Carga, saúde e performance no mesmo painel.",
+              desc: "Carga, saúde, performance e retorno em uma linha do tempo única.",
             },
             {
-              title: "Alertas acionáveis",
-              desc: "Sinais claros de risco, fadiga e retorno.",
+              title: "Insights acionáveis",
+              desc: "Sinais precoces de risco, fadiga e queda de performance.",
             },
             {
-              title: "Histórico por atleta",
-              desc: "Contexto imediato para decidir em minutos.",
+              title: "Gestão por atleta",
+              desc: "Histórico, prontidão e recomendações contextualizadas para o staff.",
             },
           ].map((item) => (
-            <div
-              key={item.title}
-              className="card-premium p-6 backdrop-blur-md"
-            >
+            <div key={item.title} className="card-premium p-6 backdrop-blur-md">
               <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/70">
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-teal" />
                 Solução
               </div>
-              <div className="mt-2 text-base font-semibold text-white">
-                {item.title}
-              </div>
+              <div className="mt-2 text-base font-semibold text-white">{item.title}</div>
               <p className="mt-2 text-sm text-white/75">{item.desc}</p>
             </div>
           ))}
@@ -45,7 +40,8 @@ export function Solution() {
 
         <div className="card-premium mt-10 p-8 backdrop-blur-md">
           <p className="text-sm text-white/75">
-            Comece com dashboards prontos; a camada de IA entra assim que os dados chegam. Sem etapas complexas ou curvas de aprendizado.
+            Comece com dashboards prontos; a camada de IA sugere ajustes assim que os dados chegam.
+            Sem etapas complexas ou curvas de aprendizado.
           </p>
         </div>
       </Container>

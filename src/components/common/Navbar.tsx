@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 
 const links = [
   { label: "Plataforma", href: "#plataforma-detalhe" },
-  { label: "IA preditiva", href: "#ia" },
+  { label: "MOTUS IA", href: "#ia" },
   { label: "Clientes", href: "#clientes" },
   { label: "Contato", href: "#contato" },
 ];

@@ -64,7 +64,7 @@ export function Contact() {
         eyebrow="Contato"
         title="Fale com o time MOTUS"
         subtitle="Envie seus dados e retornamos para agendar. (Formulário em modo teste.)"
-        align="left"
+        align="center"
       />
 
       <Container>

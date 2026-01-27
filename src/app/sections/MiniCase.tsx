@@ -31,7 +31,7 @@ export function MiniCase() {
       <SectionHeaderDark
         eyebrow="Exemplo"
         title="Da fragmentação ao ajuste preventivo"
-        subtitle="Um cenário simples para mostrar a leitura MOTUS."
+        subtitle="Um cenário simples para mostrar a leitura MOTUS sem dados fictícios."
         align="left"
       />
 
@@ -40,17 +40,17 @@ export function MiniCase() {
           <Block
             label="Problema"
             title="Leitura fragmentada e lenta"
-            desc="Dados soltos; decisão atrasada."
+            desc="Dados soltos; decisão atrasada para treino e retorno."
           />
           <Block
             label="Abordagem MOTUS"
             title="Leitura única e acionável"
-            desc="Painel único, alertas claros com contexto."
+            desc="Painel único com sinais de carga, saúde e performance."
           />
           <Block
             label="Resultado esperado"
             title="Ajuste antes do risco"
-            desc="Staff ajusta carga antes do risco."
+            desc="Staff ajusta carga e recuperação com antecedência."
           />
         </div>
 
@@ -60,8 +60,8 @@ export function MiniCase() {
             <ul className="mt-4 space-y-3 text-sm text-white/75">
               {[
                 "Indicadores padronizados, sem ruído.",
-                "Histórico do atleta sempre visível.",
-                "Alertas chegam antes do treino.",
+                "Histórico do atleta sempre visível para gestão do elenco.",
+                "Sinais chegam antes do treino para planejar melhor o microciclo.",
               ].map((t) => (
                 <li key={t} className="flex gap-2">
                   <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-teal" />
@@ -72,11 +72,9 @@ export function MiniCase() {
           </div>
 
           <div className="card-premium p-8 backdrop-blur-md">
-            <div className="text-sm font-semibold text-white">
-              Quer ver com os dados do seu clube?
-            </div>
+            <div className="text-sm font-semibold text-white">Quer ver com os dados do seu clube?</div>
             <p className="mt-2 text-sm text-white/70">
-              Mostramos a leitura e os alertas já com sua rotina.
+              Mostramos a leitura e os insights já com a sua rotina.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">

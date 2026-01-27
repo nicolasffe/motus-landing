@@ -34,8 +34,8 @@ export function HowItWorks() {
     <section className="relative py-20">
       <SectionHeaderDark
         eyebrow="Como funciona"
-        title="Do dado ao alerta em três passos"
-        subtitle="Integre, acompanhe e ajuste sem burocracia."
+        title="Do dado ao ajuste em três passos"
+        subtitle="Integre, acompanhe e ajuste sem burocracia — do treino ao retorno do atleta."
         align="left"
       />
 
@@ -44,17 +44,17 @@ export function HowItWorks() {
           <Step
             index="01"
             title="Integra ou importa"
-            desc="Suba dados do clube em um único padrão."
+            desc="Carga, saúde e performance no mesmo padrão."
           />
           <Step
             index="02"
-            title="Painéis prontos"
-            desc="Leitura por atleta e microciclo com variações relevantes."
+            title="Leitura única"
+            desc="Painéis prontos com variações relevantes por atleta e grupo."
           />
           <Step
             index="03"
-            title="Alertas em tempo real"
-            desc="Sinais de risco e fadiga para agir no treino."
+            title="Recomenda e executa"
+            desc="IA destaca sinais; staff decide ajustes de treino, recuperação e retorno."
           />
         </div>
       </Container>

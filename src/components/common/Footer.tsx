@@ -2,11 +2,9 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 
 const links = [
-  { label: "Produto", href: "#plataforma" },
-  { label: "IA preditiva", href: "#ia" },
+  { label: "Plataforma", href: "#plataforma-detalhe" },
+  { label: "MOTUS IA", href: "#ia" },
   { label: "Clientes", href: "#clientes" },
-  { label: "Implantação", href: "#implantacao" },
-  { label: "FAQ", href: "#faq" },
   { label: "Contato", href: "#contato" },
 ];
 

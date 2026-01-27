@@ -52,7 +52,7 @@ export function Hero() {
             {[
               { k: "Leitura única", v: "Carga, saúde e performance" },
               { k: "IA preditiva", v: "Alertas antes do treino" },
-              { k: "Disponibilidade", v: "Elenco acima de 90%" },
+              { k: "Retorno seguro", v: "Critérios claros para voltar ao jogo" },
             ].map((item) => (
               <div key={item.k} className="card-premium px-4 py-3 backdrop-blur-md">
                 <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-white/70">

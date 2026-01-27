@@ -47,7 +47,7 @@ export function Implementation() {
       <SectionHeaderDark
         eyebrow="Implantação"
         title="Rápida para começar, flexível para evoluir"
-        subtitle="Primeiro valor imediato, depois integrações sob medida."
+        subtitle="Primeiro valor imediato; depois integrações e rotinas sob medida."
         align="left"
       />
 
@@ -56,40 +56,29 @@ export function Implementation() {
           <Step
             n="01"
             title="Mapeamento e setup"
-            desc="Mapeamos a rotina e definimos indicadores-chave."
-            bullets={[
-              "Fontes de dados e cadência do staff",
-              "Critérios básicos de prontidão",
-            ]}
+            desc="Mapeamos rotina e indicadores-chave do clube."
+            bullets={["Fontes de dados e cadência do staff", "Critérios básicos de prontidão e retorno"]}
           />
           <Step
             n="02"
             title="Dashboards e cadência"
-            desc="Painéis prontos com leitura semanal."
-            bullets={[
-              "Dashboards por microciclo e atleta",
-              "Alertas e rituais de revisão",
-            ]}
+            desc="Painéis prontos para leitura semanal e diária."
+            bullets={["Visão por microciclo e atleta", "Rituais de revisão e comunicação com o staff"]}
           />
           <Step
             n="03"
             title="MOTUS IA e evolução"
-            desc="IA ativada com histórico do clube."
-            bullets={[
-              "Sinais preditivos de risco",
-              "Ajustes contínuos por temporada",
-            ]}
+            desc="IA ativada com histórico do clube para sugerir ajustes."
+            bullets={["Sinais preditivos de risco e fadiga", "Ajustes contínuos por temporada"]}
           />
         </div>
 
         <div className="card-premium mt-10 p-8 backdrop-blur-md">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <div className="text-sm font-semibold text-white">
-                Quer ver ao vivo?
-              </div>
+              <div className="text-sm font-semibold text-white">Quer ver ao vivo?</div>
               <p className="mt-2 text-sm text-white/75">
-                Mostramos o fluxo, os alertas e próximos passos em menos de 20 minutos.
+                Mostramos o fluxo, os insights da IA e próximos passos em menos de 20 minutos.
               </p>
               <div className="mt-3 flex flex-wrap gap-2 text-xs text-white/60">
                 <span className="rounded-full bg-white/5 px-3 py-1">Demo guiada 15-20 min</span>
@@ -102,7 +91,7 @@ export function Implementation() {
                 Solicitar demonstração
               </Button>
               <Button href="#plataforma" variant="secondary">
-                Ver dashboards
+                Ver fluxos
               </Button>
             </div>
           </div>
