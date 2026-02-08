@@ -1,6 +1,4 @@
-
 import { Container } from "@/components/ui/Container";
-import { EOF } from "dns";
 
 type Props = {
   eyebrow?: string;

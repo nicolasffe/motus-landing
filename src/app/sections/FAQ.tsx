@@ -66,7 +66,7 @@ export function FAQ() {
     <section id="faq" className="relative py-20">
       <SectionHeaderDark
         eyebrow="FAQ"
-        title="Dúvidas rápidas antes da demo"
+        title="Dúvidas rápidas antes da demonstração"
         subtitle="Respostas objetivas para acelerar a decisão."
         align="left"
       />

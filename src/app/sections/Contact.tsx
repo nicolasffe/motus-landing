@@ -1,183 +1,67 @@
-"use client";
+﻿"use client";
 
-import { useMemo, useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeaderDark } from "@/components/ui/SectionHeaderDark";
 import { Button } from "@/components/ui/Button";
-
-type FormState = {
-  name: string;
-  email: string;
-  org: string;
-  role: string;
-  message: string;
-};
-
-const roles = [
-  "Diretoria / Gestão",
-  "Preparação Física",
-  "Fisiologia",
-  "Departamento Médico",
-  "Comissão Técnica",
-  "Outro",
-];
+import { useDemoModal } from "@/components/common/DemoModalContext";
 
 export function Contact() {
-  const [form, setForm] = useState<FormState>({
-    name: "",
-    email: "",
-    org: "",
-    role: "",
-    message: "",
-  });
-
-  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
-  const [error, setError] = useState<string | null>(null);
-
-  const isValid = useMemo(() => {
-    const emailOk = /^\S+@\S+\.\S+$/.test(form.email.trim());
-    return (
-      form.name.trim().length >= 2 &&
-      emailOk &&
-      form.org.trim().length >= 2 &&
-      form.role.trim().length >= 2
-    );
-  }, [form]);
-
-  async function onSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setError(null);
-
-    if (!isValid) {
-      setError("Preencha nome, e-mail, instituição e cargo.");
-      return;
-    }
-
-    setStatus("sending");
-    await new Promise((r) => setTimeout(r, 700));
-    setStatus("sent");
-  }
+  const { open } = useDemoModal();
 
   return (
-    <section id="contato" className="relative overflow-hidden py-20">
+    <section id="contato" className="section-shell relative overflow-hidden">
       <SectionHeaderDark
         eyebrow="Contato"
         title="Fale com o time MOTUS"
-        subtitle="Envie seus dados e retornamos para agendar. (Formulário em modo teste.)"
+        subtitle="Uma conversa objetiva para mostrar como a MOTUS se encaixa na rotina do clube."
         align="center"
       />
 
       <Container>
-        <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_420px] lg:items-start">
-          <div className="card-premium p-8 backdrop-blur-md">
-            <div className="text-sm font-semibold text-white">O que você recebe na demo</div>
-
-            <ul className="mt-4 space-y-3 text-sm text-white/70">
+        <div className="mx-auto mt-12 grid max-w-5xl gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+          <div className="space-y-5">
+            <div className="reveal text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-teal">
+              O que você vê na demonstração
+            </div>
+            <h3 className="reveal reveal-delay-1 section-title-lg text-white">Operação integrada em um único fluxo</h3>
+            <p className="reveal reveal-delay-2 section-subtitle section-text text-white/76">
+              Mostramos a rotina diária da plataforma e como as decisões ficam mais rápidas entre comissão técnica,
+              preparação física e departamento médico.
+            </p>
+            <ul className="reveal reveal-delay-3 section-bullets section-text text-base">
               {[
-                "Tour rápido pelos painéis.",
-                "Como os alertas funcionam na sua rotina.",
-                "Próximos passos e implantação.",
-              ].map((t) => (
-                <li key={t} className="flex gap-2">
+                "Painel diário de risco e prontidão.",
+                "Ajustes de carga orientados por IA.",
+                "Resumo semanal pronto para reunião.",
+              ].map((text) => (
+                <li key={text}>
                   <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-teal" />
-                  <span>{t}</span>
+                  <span>{text}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="card-premium p-6 backdrop-blur-md">
-            {status === "sent" ? (
-              <div className="card-premium p-6 backdrop-blur-md">
-                <div className="text-sm font-semibold text-white">
-                  Solicitação enviada (modo teste)
-                </div>
-                <p className="mt-2 text-sm text-white/70">
-                  Ao conectar o envio real, você receberá a confirmação por e-mail.
-                </p>
-                <div className="mt-6">
-                  <Button
-                    variant="secondary"
-                    onClick={() => {
-                      setStatus("idle");
-                      setForm({ name: "", email: "", org: "", role: "", message: "" });
-                    }}
-                  >
-                    Enviar outra solicitação
-                  </Button>
-                </div>
-              </div>
-            ) : (
-              <form onSubmit={onSubmit} className="grid gap-4">
-                <div>
-                  <label className="text-xs text-white/60">Nome</label>
-                  <input
-                    className="mt-1 w-full rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm text-white outline-none focus:ring-2 focus:ring-brand-teal/40"
-                    value={form.name}
-                    onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    placeholder="Seu nome"
-                  />
-                </div>
-
-                <div>
-                  <label className="text-xs text-white/60">E-mail</label>
-                  <input
-                    className="mt-1 w-full rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm text-white outline-none focus:ring-2 focus:ring-brand-teal/40"
-                    value={form.email}
-                    onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    placeholder="email@clube.com"
-                  />
-                </div>
-
-                <div>
-                  <label className="text-xs text-white/60">Clube / Instituição</label>
-                  <input
-                    className="mt-1 w-full rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm text-white outline-none focus:ring-2 focus:ring-brand-teal/40"
-                    value={form.org}
-                    onChange={(e) => setForm({ ...form, org: e.target.value })}
-                    placeholder="Nome do clube"
-                  />
-                </div>
-
-                <div>
-                  <label className="text-xs text-white/60">Cargo</label>
-                  <select
-                    className="mt-1 w-full rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm text-white outline-none focus:ring-2 focus:ring-brand-teal/40"
-                    value={form.role}
-                    onChange={(e) => setForm({ ...form, role: e.target.value })}
-                  >
-                    <option value="">Selecione</option>
-                    {roles.map((r) => (
-                      <option key={r} value={r}>
-                        {r}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label className="text-xs text-white/60">Mensagem (opcional)</label>
-                  <textarea
-                    className="mt-1 min-h-[96px] w-full rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm text-white outline-none focus:ring-2 focus:ring-brand-teal/40"
-                    value={form.message}
-                    onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    placeholder="Conte um pouco sobre sua necessidade."
-                  />
-                </div>
-
-                {error ? (
-                  <div className="rounded-xl border border-red-500/30 bg-red-500/10 px-3 py-2 text-xs text-white/80">
-                    {error}
-                  </div>
-                ) : null}
-
-                <Button type="submit" variant="primary">
-                  {status === "sending" ? "Enviando..." : "Solicitar demonstração"}
-                </Button>
-
-                <p className="text-xs text-white/55">Autorizo contato para agendar a demonstração.</p>
-              </form>
-            )}
+          <div className="layer-soft reveal reveal-delay-2 space-y-5 rounded-2xl p-6 lg:ml-4">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/60">Próximo passo</div>
+            <h4 className="section-title-lg text-white">Pronto para agendar?</h4>
+            <p className="section-subtitle text-white/72">
+              Clique em agendar, preencha os dados no modal e retornamos para confirmar o horário.
+            </p>
+            <div className="section-actions pt-1">
+              <Button onClick={open} variant="primary">
+                Agendar demonstração
+              </Button>
+              <a
+                href="https://wa.me/5512981373728?text=Ol%C3%A1%2C%20quero%20entender%20a%20MOTUS%20para%20meu%20clube."
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                Falar no WhatsApp
+              </a>
+            </div>
+            <p className="text-xs text-white/55">Ao enviar o formulário, você autoriza contato para agendamento.</p>
           </div>
         </div>
       </Container>

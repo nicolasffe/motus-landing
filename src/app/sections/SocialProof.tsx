@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeaderDark } from "@/components/ui/SectionHeaderDark";
 
@@ -22,7 +22,7 @@ function ClientCard({ client }: { client: Client }) {
     .join("");
 
   return (
-    <div className="group flex flex-col items-center gap-2 text-center">
+    <div className="group reveal flex flex-col items-center gap-2 text-center">
       {client.logo ? (
         <Image
           src={client.logo}
@@ -30,16 +30,14 @@ function ClientCard({ client }: { client: Client }) {
           width={180}
           height={90}
           loading="lazy"
-          className="h-20 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-60 group-hover:opacity-100"
+          className="h-20 w-auto object-contain grayscale opacity-60 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100"
         />
       ) : (
-        <div className="flex h-20 w-20 items-center justify-center rounded-xl bg-white/5 text-xl font-bold text-white/80 grayscale group-hover:grayscale-0 transition-all duration-500 opacity-60 group-hover:opacity-100">
+        <div className="flex h-20 w-20 items-center justify-center rounded-xl bg-white/5 text-xl font-bold text-white/80 grayscale opacity-60 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100">
           {initials}
         </div>
       )}
-      <span className="text-base font-semibold tracking-[0.08em] text-white/90">
-        {client.name}
-      </span>
+      <span className="text-base font-semibold tracking-[0.08em] text-white/90">{client.name}</span>
       <span className="h-0.5 w-10 rounded-full bg-white/15 transition-all duration-500 group-hover:bg-brand-teal" />
     </div>
   );
@@ -47,19 +45,21 @@ function ClientCard({ client }: { client: Client }) {
 
 export function SocialProof() {
   return (
-    <section id="clientes" className="relative overflow-hidden py-16">
+    <section id="clientes" className="section-shell relative overflow-hidden">
       <Container>
         <SectionHeaderDark
           eyebrow="Parceiros"
           title="Clubes com a MOTUS"
-          subtitle="Parcerias que priorizam decisões ágeis e seguras"
+          subtitle="Parcerias que priorizam decisões ágeis e seguras."
           align="center"
           size="sm"
         />
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {clients.map((client) => (
-            <ClientCard key={client.name} client={client} />
+          {clients.map((client, index) => (
+            <div key={client.name} className={index === 0 ? "" : index === 1 ? "reveal-delay-1" : index === 2 ? "reveal-delay-2" : "reveal-delay-3"}>
+              <ClientCard client={client} />
+            </div>
           ))}
         </div>
       </Container>

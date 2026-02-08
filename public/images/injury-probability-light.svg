@@ -1,0 +1,54 @@
+﻿<svg width="900" height="540" viewBox="0 0 900 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="areaLight" x1="0" y1="150" x2="0" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#19D3C5" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#19D3C5" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="lineLight" x1="120" y1="360" x2="820" y2="170" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#19D3C5"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="86" y="110" width="754" height="330" rx="24" fill="#FFFFFF" fill-opacity="0.92"/>
+
+  <g fill="#0EA5A4" fill-opacity="0.3">
+    <rect x="150" y="318" width="14" height="102" rx="7"/>
+    <rect x="270" y="266" width="14" height="154" rx="7"/>
+    <rect x="390" y="232" width="14" height="188" rx="7"/>
+    <rect x="510" y="248" width="14" height="172" rx="7"/>
+    <rect x="630" y="196" width="14" height="224" rx="7"/>
+    <rect x="750" y="184" width="14" height="236" rx="7"/>
+  </g>
+
+  <line x1="110" y1="420" x2="820" y2="420" stroke="#0F172A" stroke-opacity="0.16"/>
+  <line x1="120" y1="140" x2="120" y2="420" stroke="#0F172A" stroke-opacity="0.18"/>
+
+  <path d="M120 420 L120 360 C215 300 285 260 360 250 C435 240 485 270 545 230 C610 190 700 200 820 170 L820 420 Z" fill="url(#areaLight)"/>
+  <path d="M120 360 C215 300 285 260 360 250 C435 240 485 270 545 230 C610 190 700 200 820 170" stroke="url(#lineLight)" stroke-width="3" stroke-linecap="round"/>
+
+  <g fill="#19D3C5" stroke="#0F172A" stroke-opacity="0.22">
+    <circle cx="120" cy="360" r="6"/>
+    <circle cx="240" cy="300" r="6"/>
+    <circle cx="360" cy="250" r="6"/>
+    <circle cx="480" cy="270" r="6"/>
+    <circle cx="600" cy="190" r="6"/>
+    <circle cx="740" cy="190" r="6"/>
+    <circle cx="820" cy="170" r="7"/>
+  </g>
+
+  <line x1="700" y1="140" x2="700" y2="420" stroke="#0F172A" stroke-opacity="0.26" stroke-dasharray="6 6"/>
+  <circle cx="700" cy="190" r="8" fill="#2F6BFF" stroke="#FFFFFF" stroke-width="2"/>
+
+  <rect x="638" y="104" width="136" height="52" rx="10" fill="#FFFFFF" stroke="#0F172A" stroke-opacity="0.15"/>
+  <text x="652" y="132" fill="#0F172A" font-family="Inter, sans-serif" font-size="13" font-weight="700">Hoje</text>
+  <text x="652" y="150" fill="#0EA5A4" font-family="Inter, sans-serif" font-size="12">Ajustar microciclo</text>
+
+  <rect x="140" y="170" width="162" height="34" rx="14" fill="#FFFFFF" stroke="#0F172A" stroke-opacity="0.08"/>
+  <circle cx="160" cy="187" r="6" fill="#FBBF24"/>
+  <text x="176" y="192" fill="#0F172A" font-family="Inter, sans-serif" font-size="12" font-weight="600">Risco moderado</text>
+
+  <text x="108" y="436" fill="#0F172A" fill-opacity="0.55" font-family="Inter, sans-serif" font-size="11">0</text>
+  <text x="795" y="436" fill="#0F172A" fill-opacity="0.55" font-family="Inter, sans-serif" font-size="11">Semana</text>
+  <text x="74" y="148" fill="#0F172A" fill-opacity="0.55" font-family="Inter, sans-serif" font-size="11" transform="rotate(-90 74 148)">Probabilidade de lesão</text>
+</svg>

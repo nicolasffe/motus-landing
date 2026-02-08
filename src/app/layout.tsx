@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Manrope, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { Providers } from "@/app/providers";
 
 const displayFont = Plus_Jakarta_Sans({
   variable: "--font-display",
@@ -33,16 +34,18 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${displayFont.variable} ${bodyFont.variable} ${geistMono.variable} antialiased`}>
-        <div className="relative min-h-screen">
-          {/* FUNDO GLOBAL LIMPO (SEM QUADRICULADO) */}
-          <div className="pointer-events-none fixed inset-0 -z-10">
-            <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/0 to-black/25" />
-            <div className="absolute -top-48 left-[-160px] h-[560px] w-[560px] rounded-full bg-brand-teal/10 blur-3xl" />
-            <div className="absolute -bottom-64 right-[-220px] h-[680px] w-[680px] rounded-full bg-brand-blue/10 blur-3xl" />
-          </div>
+        <Providers>
+          <div className="relative min-h-screen">
+            {/* FUNDO GLOBAL LIMPO (SEM QUADRICULADO) */}
+            <div className="pointer-events-none fixed inset-0 -z-10">
+              <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/0 to-black/25" />
+              <div className="absolute -top-48 left-[-160px] h-[560px] w-[560px] rounded-full bg-brand-teal/10 blur-3xl" />
+              <div className="absolute -bottom-64 right-[-220px] h-[680px] w-[680px] rounded-full bg-brand-blue/10 blur-3xl" />
+            </div>
 
-          {children}
-        </div>
+            {children}
+          </div>
+        </Providers>
       </body>
     </html>
   );
