@@ -3,6 +3,9 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeaderDark } from "@/components/ui/SectionHeaderDark";
 import { Button } from "@/components/ui/Button";
 
+const riskBars = [32, 38, 35, 49, 58, 52, 63];
+const riskLabels = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"];
+
 export function MotusIntelligence() {
   return (
     <section id="ia" className="motus-ia section-shell relative overflow-hidden">
@@ -56,23 +59,91 @@ export function MotusIntelligence() {
 
           <div className="mt-14 grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div className="motus-ia-chart editorial-media reveal reveal-delay-1">
-              <div className="block dark:hidden">
-                <Image
-                  src="/images/injury-probability-light.svg"
-                  alt="Gráfico de probabilidade de lesão com linha e área"
-                  width={1400}
-                  height={900}
-                  className="h-full w-full object-contain p-2"
-                />
-              </div>
-              <div className="hidden dark:block">
-                <Image
-                  src="/images/injury-probability-dark.svg"
-                  alt="Gráfico de probabilidade de lesão com linha e área"
-                  width={1400}
-                  height={900}
-                  className="h-full w-full object-cover"
-                />
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/30 p-4 sm:p-5">
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_0%,rgba(25,211,197,0.12),transparent_46%)]" />
+                <div className="relative space-y-4">
+                  <div className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-3">
+                    <div>
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-white/60">Painel diário de risco</p>
+                      <p className="text-xs text-white/55">Atualizado há 2 min</p>
+                    </div>
+                    <div className="rounded-lg border border-brand-teal/40 bg-brand-teal/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-brand-teal">
+                      Ao Vivo
+                    </div>
+                  </div>
+
+                  <div className="grid gap-3 sm:grid-cols-3">
+                    <div className="rounded-xl border border-white/10 bg-black/20 p-3">
+                      <div className="text-[11px] uppercase tracking-[0.1em] text-white/60">Disponíveis</div>
+                      <div className="mt-1 text-3xl font-extrabold text-white">94%</div>
+                    </div>
+                    <div className="rounded-xl border border-white/10 bg-black/20 p-3">
+                      <div className="text-[11px] uppercase tracking-[0.1em] text-white/60">Em atenção</div>
+                      <div className="mt-1 text-3xl font-extrabold text-amber-300">3</div>
+                    </div>
+                    <div className="rounded-xl border border-white/10 bg-black/20 p-3">
+                      <div className="text-[11px] uppercase tracking-[0.1em] text-white/60">Prontos</div>
+                      <div className="mt-1 text-3xl font-extrabold text-brand-teal">28</div>
+                    </div>
+                  </div>
+
+                  <div className="rounded-xl border border-brand-blue/35 bg-black/20 p-3">
+                    <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+                      <div className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/60">Tendência semanal</div>
+                      <div className="flex items-center gap-3 text-[11px] text-white/60">
+                        <span className="flex items-center gap-1">
+                          <span className="h-2 w-2 rounded-full bg-brand-teal" />
+                          Baixo
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <span className="h-2 w-2 rounded-full bg-amber-400" />
+                          Médio
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <span className="h-2 w-2 rounded-full bg-rose-400" />
+                          Alto
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="relative h-[176px]">
+                      <div className="pointer-events-none absolute inset-0 grid grid-rows-4">
+                        <span className="border-b border-white/8" />
+                        <span className="border-b border-white/8" />
+                        <span className="border-b border-white/8" />
+                        <span />
+                      </div>
+                      <div className="absolute inset-0 flex items-end gap-2">
+                        {riskBars.map((value, idx) => (
+                          <div
+                            key={`${value}-${idx}`}
+                            className={`flex-1 rounded-sm ${
+                              value >= 58
+                                ? "bg-gradient-to-t from-[#a33245] via-[#d65067] to-[#ff7f95]"
+                                : value >= 46
+                                  ? "bg-gradient-to-t from-[#9a6a1d] via-[#cf9d2f] to-[#f4c658]"
+                                  : "bg-gradient-to-t from-[#1d6b64] via-[#22a79b] to-[#5ad9ce]"
+                            }`}
+                            style={{ height: `${value}%` }}
+                          />
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="mt-2 grid grid-cols-7 gap-2 text-center text-[11px] font-semibold text-white/55">
+                      {riskLabels.map((label) => (
+                        <span key={label}>{label}</span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+                    <div className="text-[11px] font-semibold uppercase tracking-[0.12em] text-brand-teal">Recomendação da IA</div>
+                    <p className="mt-1 text-sm text-white/78">
+                      Reduzir volume do grupo ofensivo hoje e manter foco técnico/tático de baixa intensidade.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -102,10 +173,16 @@ export function MotusIntelligence() {
             </div>
           </div>
 
-          <div className="reveal reveal-delay-2 section-actions mt-10 justify-center">
-            <Button href="#contato" variant="primary">
-              Agendar demonstração
-            </Button>
+          <div className="reveal reveal-delay-2 mt-12 flex justify-center">
+            <div className="rounded-2xl border border-brand-teal/35 bg-gradient-to-r from-brand-teal/12 via-white/5 to-brand-blue/12 p-2 shadow-[0_16px_36px_rgba(25,211,197,0.2)] ring-1 ring-white/10">
+              <Button
+                href="#contato"
+                variant="primary"
+                className="h-12 px-8 text-base font-extrabold shadow-[0_10px_24px_rgba(25,211,197,0.36)] hover:shadow-[0_14px_30px_rgba(25,211,197,0.45)]"
+              >
+                Agendar demonstração
+              </Button>
+            </div>
           </div>
         </div>
       </Container>

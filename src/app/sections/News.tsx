@@ -88,15 +88,16 @@ export function News() {
                   {item.lang ? (
                     <div className="absolute right-4 top-4 flex items-center">
                       <span
-                        className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 bg-center bg-cover text-[11px] font-bold uppercase tracking-[0.14em] text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.55)] shadow-[0_4px_16px_rgba(0,0,0,0.35)]"
+                        className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 bg-center text-[11px] font-bold uppercase tracking-[0.14em] text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.55)] shadow-[0_4px_16px_rgba(0,0,0,0.35)]"
                         style={{
                           backgroundImage:
                             item.lang === "EN"
                               ? "url('/images/united-states-flat-rounded-flag-icon-with-transparent-background-free-png.png')"
                               : "url('/images/brazil-circular-removebg-preview.png')",
-                          backgroundColor: item.lang === "BR" ? "#ffffff" : undefined,
-                          backgroundSize: "cover",
+                          backgroundColor: "#ffffff",
+                          backgroundSize: item.lang === "BR" ? "contain" : "cover",
                           backgroundRepeat: "no-repeat",
+                          backgroundPosition: "center",
                         }}
                       >
                         {item.lang}
