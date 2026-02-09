@@ -24,15 +24,16 @@ export function PlatformIntro() {
             </h2>
 
             <p className="reveal reveal-delay-2 section-subtitle section-text mx-auto text-white/78 text-center">
-              A MOTUS reúne carga, wellness, testes e jogo em um painel único. A comissão visualiza riscos no início do
-              dia, ajusta o microciclo com clareza e mantém técnico e departamento médico no mesmo contexto.
+              A MOTUS reúne carga, wellness, testes, agenda de treino e plano tático em um painel único. A comissão
+              visualiza riscos no início do dia, organiza a sessão com objetivos claros e mantém técnico, preparadores e
+              departamento médico no mesmo contexto.
             </p>
 
             <ul className="reveal reveal-delay-3 section-bullets mx-auto w-full max-w-3xl text-base">
               {[
-                "Priorizar atletas e grupos antes do treino.",
-                "Ajustar carga com base em sinais relevantes.",
-                "Fechar a semana com próximos passos claros.",
+                "Priorizar atletas e grupos antes do treino, com alertas e prontidão.",
+                "Organizar a sessão: carga planejada, objetivos técnicos/táticos e tarefas do staff.",
+                "Fechar o dia e a semana com registro de execução, minutos e próximos passos claros.",
               ].map((item) => (
                 <li key={item}>
                   <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-teal" />
@@ -59,14 +60,14 @@ export function PlatformIntro() {
                 </div>
                 <h3 className="reveal reveal-delay-1 section-title-lg text-white">Menos casos, mais confiança no elenco</h3>
                 <p className="reveal reveal-delay-2 section-subtitle section-text text-white/76">
-                  No time profissional do Guarani Futebol Clube, a leitura única combinada a alertas preventivos reduziu
-                  os casos de 31 para 12 na temporada seguinte, sem ampliar o staff e com decisões mais consistentes.
+                  Em um clube profissional, a leitura única somada a alertas preventivos reduziu os afastamentos de 31
+                  para 12 na temporada seguinte, sem aumentar o staff e com decisões mais consistentes.
                 </p>
                 <ul className="reveal reveal-delay-3 section-bullets section-text text-sm">
                   {[
-                    "Dados reais de rotina de campo.",
-                    "Metodologia aplicada pela equipe MOTUS.",
-                    "Revisão semanal para ajustes contínuos.",
+                    "Dados diários do elenco centralizados.",
+                    "Plano de sessão com carga, foco físico e tático no mesmo painel.",
+                    "Alertas priorizados por risco e prontidão, revisados semanalmente com o staff.",
                   ].map((item) => (
                     <li key={item}>
                       <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-teal" />

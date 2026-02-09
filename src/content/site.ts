@@ -8,9 +8,9 @@
     { label: "Contato", href: "#contato" },
   ],
   hero: {
-    badge: "Nova geração de prevenção",
-    headline: "IA para manter o elenco inteiro, jogo após jogo.",
-    subheadline: "Um painel único com dados do clube e alertas antes da lesão.",
+    badge: "Prevenção que antecipa lesões",
+    headline: "IA que mantém o elenco inteiro, jogo após jogo.",
+    subheadline: "Painel único com carga, wellness e alertas diários antes da lesão.",
     primaryCta: "Agendar demonstração",
     secondaryCta: "Explorar plataforma",
   },

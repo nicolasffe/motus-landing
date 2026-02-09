@@ -9,8 +9,7 @@ type Client = {
 
 const clients: Client[] = [
   { name: "São José E.C.", logo: "/images/cliente-1.png" },
-  { name: "Guarani F.C.", logo: "/images/cliente-2.png" },
-  { name: "E.C. São Bernardo", logo: "/images/cliente-3.png" },
+  { name: "Nexus", logo: "/images/cliente-4.png" },
 ];
 
 function ClientCard({ client }: { client: Client }) {
@@ -49,8 +48,8 @@ export function SocialProof() {
       <Container>
         <SectionHeaderDark
           eyebrow="Parceiros"
-          title="Clubes com a MOTUS"
-          subtitle="Parcerias que priorizam decisões ágeis e seguras."
+          title="Clubes que confiam na MOTUS"
+          subtitle="Disponibilidade alta e decisões rápidas com a mesma leitura para todo o staff."
           align="center"
           size="sm"
         />

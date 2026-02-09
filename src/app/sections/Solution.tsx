@@ -7,7 +7,7 @@ export function Solution() {
       <SectionHeaderDark
         eyebrow="A solução MOTUS"
         title="Dados claros, decisões mais seguras"
-        subtitle="Informação do elenco em um só lugar para orientar treino, recuperação e gestão."
+        subtitle="Carga, wellness e jogo em um só lugar para orientar treino, recuperação e gestão."
         align="left"
       />
 
@@ -40,8 +40,8 @@ export function Solution() {
 
         <div className="card-premium mt-10 p-8 backdrop-blur-md">
           <p className="text-sm text-white/75">
-            Comece com dashboards prontos; a camada de IA sugere ajustes assim que os dados chegam.
-            Sem etapas complexas ou curvas de aprendizado.
+            Dashboards prontos; a IA sugere ajustes assim que os dados chegam. Sem etapas complexas ou curva de
+            aprendizado.
           </p>
         </div>
       </Container>
