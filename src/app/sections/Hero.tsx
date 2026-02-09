@@ -36,12 +36,6 @@ export function Hero() {
 
       <Container>
         <div className="relative flex min-h-[108vh] max-w-6xl flex-col gap-8 pb-14 pt-20 lg:min-h-[114vh] lg:pt-24">
-          <div className="reveal flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/62">
-            <span className="h-px w-10 bg-gradient-to-r from-transparent via-white/40 to-white/80" />
-            <span className="rounded-md bg-white/8 px-3 py-1 shadow-inner shadow-black/20">{site.hero.badge}</span>
-            <span className="h-px w-10 bg-gradient-to-r from-white/80 via-white/40 to-transparent" />
-          </div>
-
           <h1 className="hero-title reveal reveal-delay-1 max-w-[12ch] py-2 text-[clamp(2.35rem,5.3vw,4.85rem)] font-extrabold leading-[1.06] tracking-[-0.02em] text-white drop-shadow-[0_14px_38px_rgba(0,0,0,0.5)]">
             <span className="text-brand-teal">{leadWord}</span> {restWords.join(" ")}
           </h1>

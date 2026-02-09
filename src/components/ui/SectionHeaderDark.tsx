@@ -25,14 +25,9 @@ export function SectionHeaderDark({
     <Container>
       <div className={isCenter ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
         {eyebrow ? (
-          <div
-            className={`reveal flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/60 ${
-              isCenter ? "justify-center" : "justify-start"
-            }`}
-          >
-            <span className="h-px w-10 bg-gradient-to-r from-transparent via-white/40 to-white/80" />
-            <span className="rounded-md bg-white/8 px-3 py-1 shadow-inner shadow-black/20">{eyebrow}</span>
-            <span className="h-px w-10 bg-gradient-to-r from-white/80 via-white/40 to-transparent" />
+          <div className={`reveal flex items-center gap-2 ${isCenter ? "justify-center" : ""}`}>
+            <span className="h-4 w-1 rounded-full bg-brand-teal shadow-[0_0_18px_rgba(25,211,197,0.45)]" />
+            <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/68">{eyebrow}</span>
           </div>
         ) : null}
 

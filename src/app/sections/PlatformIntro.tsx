@@ -12,10 +12,9 @@ export function PlatformIntro() {
     <section id="plataforma-detalhe" className="section-shell relative overflow-hidden">
       <Container>
         <div className="mx-auto max-w-5xl">
-          <div className="reveal flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/60">
-            <span className="h-px w-10 bg-gradient-to-r from-transparent via-white/40 to-white/80" />
-            <span className="rounded-md bg-white/8 px-3 py-1 shadow-inner shadow-black/20">Plataforma MOTUS</span>
-            <span className="h-px w-10 bg-gradient-to-r from-white/80 via-white/40 to-transparent" />
+          <div className="reveal flex items-center justify-center gap-2">
+            <span className="h-4 w-1 rounded-full bg-brand-teal shadow-[0_0_18px_rgba(25,211,197,0.45)]" />
+            <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/68">Plataforma MOTUS</span>
           </div>
 
           <div className="mt-10 grid gap-8">
