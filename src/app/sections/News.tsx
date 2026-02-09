@@ -94,7 +94,7 @@ export function News() {
                             item.lang === "EN"
                               ? "url('/images/united-states-flat-rounded-flag-icon-with-transparent-background-free-png.png')"
                               : "url('/images/brazil-circular-removebg-preview.png')",
-                          backgroundColor: item.lang === "BR" ? "#0b4f2f" : undefined,
+                          backgroundColor: item.lang === "BR" ? "#ffffff" : undefined,
                           backgroundSize: "cover",
                           backgroundRepeat: "no-repeat",
                         }}
