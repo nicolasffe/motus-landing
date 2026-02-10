@@ -54,7 +54,7 @@ export function SocialProof() {
           size="sm"
         />
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {clients.map((client, index) => (
             <div key={client.name} className={index === 0 ? "" : index === 1 ? "reveal-delay-1" : index === 2 ? "reveal-delay-2" : "reveal-delay-3"}>
               <ClientCard client={client} />

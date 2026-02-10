@@ -17,7 +17,7 @@ export function PlatformIntro() {
             <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/68">Plataforma MOTUS</span>
           </div>
 
-          <div className="mt-10 grid gap-8">
+          <div className="mt-12 grid gap-8">
             <h2 className="reveal reveal-delay-1 section-title-xl text-balance bg-gradient-to-r from-white via-white to-brand-teal/80 bg-clip-text font-extrabold tracking-tight text-transparent drop-shadow-[0_12px_30px_rgba(0,0,0,0.4)] text-center">
               Plataforma que encaixa no dia a dia do clube
             </h2>

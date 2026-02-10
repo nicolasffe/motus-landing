@@ -18,8 +18,8 @@ export function SectionHeaderDark({
   const isCenter = align === "center";
   const titleSize =
     size === "sm"
-      ? "text-[clamp(1.85rem,1.45rem+1.35vw,2.6rem)]"
-      : "text-[clamp(2.15rem,1.6rem+2vw,3.4rem)]";
+      ? "text-[clamp(1.95rem,1.55rem+1.25vw,2.7rem)]"
+      : "text-[clamp(2.05rem,1.68rem+1.55vw,3.05rem)]";
 
   return (
     <Container>
@@ -27,18 +27,18 @@ export function SectionHeaderDark({
         {eyebrow ? (
           <div className={`reveal flex items-center gap-2 ${isCenter ? "justify-center" : ""}`}>
             <span className="h-4 w-1 rounded-full bg-brand-teal shadow-[0_0_18px_rgba(25,211,197,0.45)]" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/68">{eyebrow}</span>
+            <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/74">{eyebrow}</span>
           </div>
         ) : null}
 
         <h2
-          className={`reveal reveal-delay-1 mt-4 py-1 text-balance font-extrabold leading-[1.1] tracking-tight bg-gradient-to-r from-white via-white to-brand-teal/80 bg-clip-text text-transparent drop-shadow-[0_14px_34px_rgba(0,0,0,0.38)] ${titleSize}`}
+          className={`reveal reveal-delay-1 mt-5 py-1 text-balance font-extrabold leading-[1.1] tracking-tight bg-gradient-to-r from-white via-white to-brand-teal/80 bg-clip-text text-transparent drop-shadow-[0_14px_34px_rgba(0,0,0,0.38)] ${titleSize}`}
         >
           {title}
         </h2>
 
         {subtitle ? (
-          <p className={`reveal reveal-delay-2 section-subtitle mt-4 max-w-[64ch] text-white/72 ${isCenter ? "mx-auto" : ""}`}>
+          <p className={`reveal reveal-delay-2 section-subtitle mt-5 max-w-[60ch] text-white/78 ${isCenter ? "mx-auto" : ""}`}>
             {subtitle}
           </p>
         ) : null}

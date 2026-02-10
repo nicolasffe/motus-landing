@@ -15,10 +15,22 @@
 :root {
   color-scheme: dark;
   --step-body: clamp(1rem, 0.96rem + 0.2vw, 1.08rem);
+  --panel-bg: rgba(9, 16, 31, 0.54);
+  --panel-bg-strong: rgba(10, 18, 36, 0.74);
+  --panel-border: rgba(255, 255, 255, 0.15);
+  --panel-border-hover: rgba(25, 211, 197, 0.42);
+  --panel-shadow: 0 16px 38px rgba(0, 0, 0, 0.34);
+  --panel-shadow-hover: 0 22px 46px rgba(0, 0, 0, 0.4);
 }
 
 [data-theme="light"] {
   color-scheme: light;
+  --panel-bg: rgba(255, 255, 255, 0.86);
+  --panel-bg-strong: rgba(255, 255, 255, 0.94);
+  --panel-border: rgba(15, 23, 42, 0.14);
+  --panel-border-hover: rgba(15, 118, 110, 0.34);
+  --panel-shadow: 0 14px 34px rgba(15, 23, 42, 0.11);
+  --panel-shadow-hover: 0 18px 40px rgba(15, 23, 42, 0.14);
 }
 
 html,
@@ -83,6 +95,24 @@ section[id] {
 
   .logo-light {
     display: none;
+  }
+
+  .panel-surface {
+    border: 1px solid var(--panel-border);
+    background: var(--panel-bg);
+    box-shadow: var(--panel-shadow);
+    backdrop-filter: blur(12px);
+    transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease, background-color 280ms ease;
+  }
+
+  .panel-surface-strong {
+    background: var(--panel-bg-strong);
+  }
+
+  .panel-surface:hover {
+    transform: translateY(-2px);
+    border-color: var(--panel-border-hover);
+    box-shadow: var(--panel-shadow-hover);
   }
 }
 
@@ -475,6 +505,18 @@ section[id] {
   opacity: 1;
 }
 
+.page-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 30px),
+    repeating-linear-gradient(25deg, rgba(25, 211, 197, 0.05) 0 1px, transparent 1px 36px);
+  mix-blend-mode: soft-light;
+  opacity: 0.24;
+}
+
 .page-tint {
   background: rgba(5, 11, 24, 0.78);
 }
@@ -496,6 +538,14 @@ section[id] {
     radial-gradient(circle at 18% 20%, rgba(25, 211, 197, 0.08), transparent 34%),
     radial-gradient(circle at 80% 5%, rgba(47, 107, 255, 0.07), transparent 38%);
   opacity: 1;
+}
+
+[data-theme="light"] .page-overlay::after {
+  background:
+    repeating-linear-gradient(115deg, rgba(15, 23, 42, 0.06) 0 1px, transparent 1px 32px),
+    repeating-linear-gradient(25deg, rgba(15, 118, 110, 0.04) 0 1px, transparent 1px 38px);
+  mix-blend-mode: normal;
+  opacity: 0.18;
 }
 
 [data-theme="light"] .page-tint {

@@ -18,7 +18,7 @@ export function Contact() {
       />
 
       <Container>
-        <div className="mx-auto mt-12 grid max-w-5xl gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+        <div className="mx-auto mt-14 grid max-w-5xl gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div className="space-y-5">
             <div className="reveal text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-teal">
               O que você vê na demonstração
@@ -42,7 +42,7 @@ export function Contact() {
             </ul>
           </div>
 
-          <div className="layer-soft reveal reveal-delay-2 space-y-5 rounded-2xl p-6 lg:ml-4">
+          <div className="layer-soft panel-surface reveal reveal-delay-2 space-y-5 rounded-2xl p-6 lg:ml-4">
             <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/60">Próximo passo</div>
             <h4 className="section-title-lg text-white">Pronto para agendar?</h4>
             <p className="section-subtitle text-white/72">
@@ -56,7 +56,7 @@ export function Contact() {
                 href="https://wa.me/5512981373728?text=Ol%C3%A1%2C%20quero%20entender%20a%20MOTUS%20para%20meu%20clube."
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+                className="inline-flex h-11 items-center justify-center rounded-xl border border-white/16 bg-white/[0.045] px-5 text-sm font-semibold text-white transition-all duration-300 hover:border-white/28 hover:bg-white/[0.09]"
               >
                 Falar no WhatsApp
               </a>
