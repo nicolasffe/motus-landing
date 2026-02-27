@@ -9,8 +9,8 @@
   ],
   hero: {
     badge: "Prevenção que antecipa lesões",
-    headline: "IA que mantém o elenco inteiro, jogo após jogo.",
-    subheadline: "Painel único com carga, wellness e alertas diários antes da lesão.",
+    headline: "Dados aplicados à saúde e performance esportiva.",
+    subheadline: "Plataforma única que organiza dados fisiológicos, subjetivos e gera insights antes da lesão.",
     primaryCta: "Agendar demonstração",
     secondaryCta: "Explorar plataforma",
   },

@@ -19,13 +19,11 @@ export function PlatformIntro() {
 
           <div className="mt-12 grid gap-8">
             <h2 className="reveal reveal-delay-1 section-title-xl text-balance bg-gradient-to-r from-white via-white to-brand-teal/80 bg-clip-text font-extrabold tracking-tight text-transparent drop-shadow-[0_12px_30px_rgba(0,0,0,0.4)] text-center">
-              Plataforma que encaixa no dia a dia do clube
+              Plataforma que se integra na rotina do clube
             </h2>
 
             <p className="reveal reveal-delay-2 section-subtitle section-text mx-auto text-white/78 text-center">
-              A MOTUS reúne carga, wellness, testes, agenda de treino e plano tático em um painel único. A comissão
-              visualiza riscos no início do dia, organiza a sessão com objetivos claros e mantém técnico, preparadores e
-              departamento médico no mesmo contexto.
+              A MOTUS organiza as principais informações do clube em um único ambiente, reunindo dados de treino, monitoramento e planejamento para transformar informações dispersas em decisões claras. Desde o início do dia, a comissão técnica tem uma visão objetiva do cenário geral, identifica pontos de atenção e consegue ajustar o planejamento nas tomadas de decisões.
             </p>
 
             <ul className="reveal reveal-delay-3 section-bullets mx-auto w-full max-w-3xl text-base">

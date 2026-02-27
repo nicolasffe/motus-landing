@@ -48,7 +48,7 @@ export function SocialProof() {
       <Container>
         <SectionHeaderDark
           eyebrow="Parceiros"
-          title="Clubes que confiam na MOTUS"
+          title="Parceiros que confiam na MOTUS"
           subtitle="Disponibilidade alta e decisões rápidas com a mesma leitura para todo o staff."
           align="center"
           size="sm"

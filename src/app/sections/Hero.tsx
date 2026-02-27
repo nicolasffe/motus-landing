@@ -36,8 +36,9 @@ export function Hero() {
 
       <Container>
         <div className="relative flex min-h-[108vh] max-w-6xl flex-col gap-8 pb-14 pt-20 lg:min-h-[114vh] lg:pt-24">
-          <h1 className="hero-title reveal reveal-delay-1 max-w-[12ch] py-2 text-[clamp(2.35rem,5.3vw,4.85rem)] font-extrabold leading-[1.06] tracking-[-0.02em] text-white drop-shadow-[0_14px_38px_rgba(0,0,0,0.5)]">
-            <span className="text-brand-teal">{leadWord}</span> {restWords.join(" ")}
+          <h1 className="hero-title reveal reveal-delay-1 max-w-[16ch] py-2 text-[clamp(2.35rem,5.3vw,4.85rem)] font-extrabold leading-[1.06] tracking-[-0.02em] text-white drop-shadow-[0_14px_38px_rgba(0,0,0,0.5)]">
+            <span className="text-brand-teal">{leadWord}</span>{" "}
+            {restWords.join(" ")}
           </h1>
 
           <p className="hero-subtitle reveal reveal-delay-2 max-w-[58ch] text-[clamp(1.02rem,1.1vw,1.25rem)] leading-[1.68] text-white/84">
@@ -57,7 +58,6 @@ export function Hero() {
           <p className="reveal reveal-delay-3 max-w-2xl text-xs font-semibold uppercase tracking-[0.16em] text-white/68 sm:text-sm">
             Leitura única • IA preditiva • Decisão diária
           </p>
-
         </div>
       </Container>
     </section>
