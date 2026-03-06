@@ -25,7 +25,8 @@ export default function Home() {
 
           <PlatformIntro />
           <div className="transition-strip reveal reveal-delay-1">
-            Da operação diária para inteligência preditiva com decisões mais seguras.
+            Da operação diária para inteligência preditiva com decisões mais
+            seguras.
           </div>
           <MotusIntelligence />
           <Contact />

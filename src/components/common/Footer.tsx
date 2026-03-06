@@ -16,8 +16,7 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
             <div className="flex items-center gap-3">
-              <Image src="/brand/motus-white.png" alt="MOTUS" width={116} height={30} className="logo-dark opacity-95" />
-              <Image src="/brand/motus-color.png" alt="MOTUS" width={116} height={30} className="logo-light hidden opacity-95" />
+              <Image src="/brand/motus-color.png" alt="MOTUS" width={116} height={30} className="opacity-95" />
             </div>
 
             <p className="mt-4 max-w-xl text-sm text-white/72">

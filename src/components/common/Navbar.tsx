@@ -71,19 +71,11 @@ export function Navbar() {
         <div className="relative flex h-24 items-center justify-between gap-8">
           <a href="#" className="group inline-flex items-center gap-4">
             <Image
-              src="/brand/motus-white.png"
-              alt="MOTUS"
-              width={280}
-              height={84}
-              className="logo-dark h-16 w-auto opacity-100 drop-shadow-[0_18px_38px_rgba(25,211,197,0.36)] transition group-hover:scale-[1.05]"
-              priority
-            />
-            <Image
               src="/brand/motus-color.png"
               alt="MOTUS"
               width={280}
               height={84}
-              className="logo-light hidden h-16 w-auto drop-shadow-[0_14px_30px_rgba(0,0,0,0.14)] transition group-hover:scale-[1.05]"
+              className="h-16 w-auto drop-shadow-[0_14px_30px_rgba(0,0,0,0.14)] transition group-hover:scale-[1.05]"
               priority
             />
             <span className="hidden text-lg font-semibold tracking-[0.16em] text-white/90 sm:inline-block">MOTUS</span>
@@ -109,7 +101,7 @@ export function Navbar() {
             <a
               href="https://www.instagram.com/sportsmotus/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="site-social flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white/90 shadow-[0_0_0_0_rgba(0,0,0,0)] transition hover:border-brand-teal/70 hover:shadow-[0_0_0_10px_rgba(25,211,197,0.18)]"
             >
@@ -121,7 +113,7 @@ export function Navbar() {
             <a
               href="https://wa.me/5512981373728?text=Ol%C3%A1%2C%20quero%20entender%20a%20MOTUS%20para%20meu%20clube."
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="WhatsApp"
               className="site-social flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white/90 shadow-[0_0_0_0_rgba(0,0,0,0)] transition hover:border-brand-teal/70 hover:shadow-[0_0_0_10px_rgba(25,211,197,0.18)]"
             >
